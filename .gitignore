@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+vector_index.faiss
+id_map.json
+
+# Too large for GitHub (3.1 GB)
+saved_t5_model/model.safetensors
+*.safetensors

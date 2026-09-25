@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track Order - Support AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Track Your Order</h1>
+        <p>Enter your order number to see the latest status updates</p>
+      </div>
+      <a href="/" style="color: var(--primary-2); text-decoration: none; font-weight: 500;">&larr; Back to Chat</a>
+    </header>
+
+    <section class="chat-card" style="padding: 40px 24px; text-align: center; min-height: 40vh; display: flex; flex-direction: column; justify-content: center;">
+      <form id="track-form" onsubmit="event.preventDefault(); document.getElementById('result').style.opacity = '1'; document.getElementById('result').innerHTML = 'Status: Your order <strong>' + document.getElementById('order_number').value + '</strong> is being processed and will ship shortly!';">
+        <label for="order_number" style="display: block; margin-bottom: 12px; font-weight: 500; color: var(--text);">Order Number</label>
+        <input type="text" id="order_number" placeholder="e.g. ORD-12345" required style="width: 100%; max-width: 320px; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(150, 175, 255, 0.34); background: rgba(15, 23, 44, 0.92); color: var(--text); outline: none; margin-bottom: 20px; font-size: 1rem;">
+        <button type="submit" style="display: block; margin: 0 auto; font-size: 1rem; padding: 12px 24px;">Track Order</button>
+      </form>
+      <p id="result" style="margin-top: 30px; color: var(--success); font-weight: 500; opacity: 0; transition: opacity 0.3s ease; font-size: 1.1rem;"></p>
+    </section>
+  </main>
+</body>
+</html>

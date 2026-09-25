@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Support AI Assistant</h1>
+        <p>Deploy-ready Flask chatbot with semantic retrieval</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="/infograph" style="background:linear-gradient(135deg,rgba(37,99,235,0.25),rgba(124,58,237,0.2));border:1px solid rgba(99,160,255,0.35);color:#93c5fd;padding:7px 14px;border-radius:10px;font-size:0.82rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.filter='brightness(1.15)'" onmouseout="this.style.filter=''">🎓 Infograph Generator</a>
+        <div class="status" id="status-pill">Ready</div>
+      </div>
+    </header>
+
+    <section class="chat-card">
+      <div id="chat-window" class="chat-window">
+        <article class="message bot">
+          <p>Welcome! Ask me about orders, refunds, delivery, accounts, and payments.</p>
+        </article>
+      </div>
+
+      <form id="chat-form" class="composer">
+        <textarea id="message-input" placeholder="Type your question..." rows="1" required></textarea>
+        <div class="composer-actions">
+          <label class="threshold">
+            <span>Confidence</span>
+            <input id="threshold-input" type="range" min="0.2" max="0.9" step="0.01" value="0.45">
+            <output id="threshold-value">0.45</output>
+          </label>
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

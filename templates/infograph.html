@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEPI Infographic Generator — Digital Egypt Pioneers Initiative</title>
+  <meta name="description" content="Generate a premium 16:9 presentation infographic for your DEPI graduation project. Select your track, paste your document, and download a conference-quality slide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='infograph.css') }}">
+</head>
+<body>
+
+  <!-- Animated background particles -->
+  <div class="particles"></div>
+
+  <div class="page-wrap">
+
+    <!-- ── Top nav ───────────────────────────────────────────── -->
+    <div class="top-nav">
+      <a href="/" class="nav-back">← Back to Chatbot</a>
+      <span style="font-size:0.78rem;color:var(--muted);">DEPI Infographic Generator</span>
+    </div>
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="depi-badge">
+        <span class="dot"></span>
+        Digital Egypt Pioneers Initiative
+      </div>
+      <h1>Graduation Project<br>Infographic Generator</h1>
+      <p>Transform your project document into a premium 16:9 conference-quality slide — ready for PowerPoint, Google Slides & Keynote.</p>
+
+      <!-- Progress steps -->
+      <div class="steps-bar">
+        <div class="step-item active" data-step="1">
+          <div class="step-circle">1</div>
+          <span class="step-label">Track</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-item" data-step="2">
+          <div class="step-circle">2</div>
+          <span class="step-label">Document</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-item" data-step="3">
+          <div class="step-circle">3</div>
+          <span class="step-label">Details</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-item" data-step="4">
+          <div class="step-circle">4</div>
+          <span class="step-label">Preview & Download</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         STEP 1 — SELECT TRACK
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="panel" id="panel-track">
+      <div class="panel-header">
+        <div class="panel-icon cyan">🎓</div>
+        <div>
+          <h2>Step 1 — Select Your DEPI Track</h2>
+          <p>Choose the track that matches your graduation project</p>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="track-grid" id="track-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         STEP 2 — UPLOAD / PASTE DOCUMENT
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="panel" id="panel-doc">
+      <div class="panel-header">
+        <div class="panel-icon purple">📄</div>
+        <div>
+          <h2>Step 2 — Upload Your Project Document</h2>
+          <p>Paste your project document text or upload a .txt file for auto-extraction</p>
+        </div>
+      </div>
+      <div class="panel-body">
+
+        <!-- Upload drop zone -->
+        <div class="upload-zone" id="upload-zone">
+          <input type="file" id="file-input" accept=".txt,.md,.csv">
+          <div class="upload-icon">📂</div>
+          <p><strong>Drag & drop</strong> your document here</p>
+          <p>or click to browse a <strong>.txt / .md</strong> file</p>
+          <small>PDF & DOCX: copy-paste text into the box below</small>
+        </div>
+
+        <!-- Or paste text -->
+        <div class="field">
+          <label for="f-doc-text">Or paste your full project document text here</label>
+          <textarea id="f-doc-text" rows="8"
+            placeholder="Paste the entire project document (proposal, abstract, description) here. The auto-extract engine will parse project title, problem, solution, tech stack, phases, and deliverables automatically..."></textarea>
+        </div>
+
+        <!-- Status -->
+        <div class="parse-status" id="parse-status"></div>
+
+        <div class="actions-row">
+          <button class="btn btn-primary" onclick="parseAndFill()">
+            ⚡ Auto-Extract Content
+          </button>
+          <button class="btn btn-ghost" onclick="document.getElementById('f-doc-text').value=''; document.getElementById('parse-status').classList.remove('show');">
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         STEP 3 — FILL IN DETAILS
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="panel" id="fields-section">
+      <div class="panel-header">
+        <div class="panel-icon blue">✏️</div>
+        <div>
+          <h2>Step 3 — Review &amp; Edit Project Details</h2>
+          <p>Auto-filled from your document — refine anything before generating</p>
+        </div>
+      </div>
+      <div class="panel-body">
+
+        <!-- Basic Info -->
+        <div class="form-row">
+          <div class="field">
+            <label for="f-title">Project Title *</label>
+            <input type="text" id="f-title" placeholder="e.g. SmartHealth AI Diagnosis Platform">
+          </div>
+          <div class="field">
+            <label for="f-summary">One-sentence Summary</label>
+            <input type="text" id="f-summary" placeholder="Brief description of what the project does">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="f-team">Team Size</label>
+            <input type="text" id="f-team" placeholder="e.g. 5 members">
+          </div>
+          <div class="field">
+            <label for="f-duration">Project Duration</label>
+            <input type="text" id="f-duration" placeholder="e.g. 6 months">
+          </div>
+        </div>
+
+        <!-- Problem / Solution / Users / Deploy -->
+        <div class="form-row">
+          <div class="field">
+            <label for="f-problem">Business Problem</label>
+            <textarea id="f-problem" rows="3" placeholder="What problem does this project solve?"></textarea>
+          </div>
+          <div class="field">
+            <label for="f-solution">Proposed Solution</label>
+            <textarea id="f-solution" rows="3" placeholder="How does the system solve the problem?"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="f-users">Target Users</label>
+            <textarea id="f-users" rows="2" placeholder="Who are the primary users or stakeholders?"></textarea>
+          </div>
+          <div class="field">
+            <label for="f-deploy">Deployment Strategy</label>
+            <textarea id="f-deploy" rows="2" placeholder="e.g. Docker on AWS EC2, Vercel + Railway..."></textarea>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="form-row single">
+          <div class="field">
+            <label for="f-features">Core Features (one per line, max 5)</label>
+            <textarea id="f-features" rows="5" placeholder="Real-time dashboard&#10;AI-powered recommendations&#10;Multi-tenant support&#10;REST API integration&#10;Role-based access control"></textarea>
+          </div>
+        </div>
+
+        <!-- Architecture & AI -->
+        <div class="form-row">
+          <div class="field">
+            <label for="f-arch">System Architecture (brief)</label>
+            <textarea id="f-arch" rows="2" placeholder="e.g. React frontend → FastAPI backend → PostgreSQL + Redis → Docker on GCP"></textarea>
+          </div>
+          <div class="field">
+            <label for="f-ai">AI / ML Components (if any)</label>
+            <textarea id="f-ai" rows="2" placeholder="e.g. LangGraph multi-agent, GPT-4o for NLP, scikit-learn forecasting"></textarea>
+          </div>
+        </div>
+
+        <!-- Deliverables / Future -->
+        <div class="form-row">
+          <div class="field">
+            <label for="f-delivery">Project Deliverables (comma-separated)</label>
+            <input type="text" id="f-delivery" placeholder="Working System, Dashboard, REST API, Documentation, Source Code">
+          </div>
+          <div class="field">
+            <label for="f-future">Future Enhancements</label>
+            <input type="text" id="f-future" placeholder="e.g. Mobile app, multi-language support, advanced analytics">
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="field" style="margin-top:8px;">
+          <label>Technology Stack — click to select all technologies used</label>
+          <input type="text" id="tech-search" placeholder="🔍 Search technologies..." style="margin-bottom:10px;">
+          <div class="chip-wrap" id="tech-chips"></div>
+        </div>
+
+        <!-- Development Phases -->
+        <div class="field" style="margin-top:16px;">
+          <label>Development Phases — select phases that apply</label>
+          <div class="chip-wrap" id="phase-chips"></div>
+        </div>
+
+        <div class="actions-row" style="margin-top:32px;">
+          <button class="btn btn-primary btn-lg" onclick="generateInfograph()">
+            🎨 Generate Infographic
+          </button>
+          <button class="btn btn-ghost" onclick="document.querySelectorAll('#fields-section input, #fields-section textarea').forEach(el=>el.value='')">
+            Reset Fields
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         STEP 4 — PREVIEW & DOWNLOAD
+    ═══════════════════════════════════════════════════════════ -->
+    <div id="preview-section">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-icon green">🖼️</div>
+          <div>
+            <h2>Step 4 — Preview &amp; Download</h2>
+            <p>Your 16:9 presentation slide is ready — download as PNG</p>
+          </div>
+        </div>
+        <div class="panel-body">
+
+          <div class="preview-controls">
+            <div class="preview-label">
+              <span class="live-dot"></span>
+              Live Preview — 1920 × 1080 (16:9)
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+              <span style="font-size:0.78rem;color:var(--muted);">Color theme:</span>
+              <div class="theme-picker" id="theme-swatches"></div>
+              <button class="btn btn-accent" onclick="renderCanvas()">↺ Refresh</button>
+            </div>
+          </div>
+
+          <!-- 16:9 Canvas -->
+          <div class="canvas-wrapper">
+            <canvas id="infograph-canvas"></canvas>
+          </div>
+
+          <!-- Download bar -->
+          <div class="download-bar">
+            <button class="btn btn-success btn-lg" onclick="downloadPNG()">
+              ⬇️ Download PNG (1920×1080)
+            </button>
+            <button class="btn btn-ghost" onclick="generateInfograph()">
+              🔄 Regenerate
+            </button>
+          </div>
+
+          <p style="margin-top:12px;font-size:0.78rem;color:var(--muted);">
+            💡 <strong>Tips:</strong> The PNG is 1920×1080 and ready to insert into PowerPoint, Google Slides, or Keynote as an image slide.
+            For best results, set your slide size to 16:9 before inserting.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <!-- Footer -->
+  <footer class="pg-footer">
+    DEPI — Digital Egypt Pioneers Initiative &nbsp;•&nbsp; Graduation Project Infographic Generator &nbsp;•&nbsp; R4 Cohort 2026
+  </footer>
+
+  <script src="{{ url_for('static', filename='infograph.js') }}"></script>
+</body>
+</html>

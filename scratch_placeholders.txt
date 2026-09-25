@@ -1,0 +1,391 @@
+Access Key
+Access Key Recovery
+Access Key Reset Page URL
+Access Key Retrieval
+Account
+Account Access Key Reset
+Account Category
+Account Change
+Account Closure Process
+Account Closure Timeframe
+Account Details
+Account ID
+Account Key Recovery
+Account Management
+Account Name
+Account Number
+Account Page
+Account Plan
+Account Recovery
+Account Recovery Page
+Account Recovery Page URL
+Account Security
+Account Type
+Account Type Switch
+Account Upgrade
+Add a New Address
+Basic
+Basic Account
+Billing
+Billing Category
+Billing History
+Business Hours
+Business Name Anonymized
+Cancel Purchase
+Cancellation Policy
+Cancellation Refund Time
+Carrier Name
+Case Number
+Change Access Key
+Change Account
+Change Key
+Change PIN
+Change Password
+Change Profile
+Change User
+Choose Account Type
+Choose the {{Account Type
+City 1
+City 2
+City 3
+Claims Contact Number
+Claims Department
+Claims Website URL
+Client First Name
+Client Full Name
+Client Last Name
+Client Name
+Closing Time
+Company
+Company Account
+Company Name
+Company Phone Number
+Company Representative Name
+Company Support Channels
+Company Support Page URL
+CompanyName
+Compensation ID
+Compensation Identifier
+Compensation Type
+Complaint Email Address
+Complaint Hotline Number
+Completion steps
+Confirm
+Confirm Cancellation
+Consumer Complaint Email Address
+Contact Channel
+Contact Method
+Contact Page URL
+Contact Us
+Country
+Country List
+Create Account
+Create a Secondary Address
+Currency Symbol
+Customer Assistance Email
+Customer Assistance Email Address
+Customer Assistance Hours
+Customer Assistance Phone Number
+Customer Claims Email Address
+Customer ID
+Customer Service Email
+Customer Service Email Address
+Customer Service Hours
+Customer Service Toll-Free Number
+Customer Support Closing Time
+Customer Support Contact Number
+Customer Support Days
+Customer Support Email
+Customer Support End Time
+Customer Support Hotline
+Customer Support Hours
+Customer Support Live Chat URL
+Customer Support Opening Time
+Customer Support Phone Number
+Customer Support Start Time
+Customer Support Team
+Customer Support Team Name
+Customer Support Ticket Number
+Customer Support Toll-Free Number
+Customer Support Website
+Cut Off Time
+Dashboard
+Date
+Date Range
+Date of the Bill
+Date of the Invoice
+Delivery City
+Delivery Country
+Delivery Date
+Delivery Time
+Destination
+Downgrade
+Duplicate Charges Refund Time
+E-commerce Platform 1
+E-commerce Platform 2
+E-commerce Platform Names
+ETA
+Edit PIN
+Email Address
+Estimated Delivery Time
+Event Cancellation Refund Time
+Expedited Delivery Time
+Expedited Shipping Days
+Expedited Shipping Time
+Explanation of Feature 1
+Explanation of Feature 2
+Explanation of Feature 3
+Express Delivery Time
+Express Shipping Days
+Express Shipping Time
+Feature 1
+Feature 2
+Feature 3
+Feedback Email
+Feedback Email Address
+Fifth Step
+First Step
+Forgot Access Key
+Forgot Account Access Key
+Forgot Account Key
+Forgot Key
+Forgot PIN
+Forgot PIN Code
+Forgot PIN code
+Forgot Password
+Forgot Pin
+Forgot Pin Code
+Forgot Profile Access Key
+Forgot Profile Key
+Forgot User Access Key
+Forgot User Account Key
+Forgot User Key
+Forgot User Profile Key
+Forgot Your Access Key
+Fourth Step
+Free Account Name
+Free Customer Support Number
+Full Name
+Help Center
+Help Center URL
+Invoice Name
+Invoice Number
+Key Management
+Key Recovery Page URL
+Live Chat
+Live Chat Feature
+Live Chat Support
+Login Page
+Login Page URL
+Login URL
+Login page URL
+Login steps
+Lost Key
+Manage PIN
+Manage Subscription
+Max Delivery Time
+Membership Type
+Min Delivery Time
+Money Amount
+Month
+My Account
+My Purchases
+Navigation steps
+Non-receipt of Goods Refund Time
+Number of Days
+Online Company Portal Info
+Online Customer Support Channel
+Online Marketplace
+Online Order Interaction
+Online Store
+Opening Time
+Order Number
+Order Status
+Order Tracker
+Order Tracking
+Order Tracking Method
+Order/Claim Number
+Order/Claim/Compensation
+Order/Invoice Number
+Order/Refund/Case Number
+Order/Refund/Transaction
+Order/Transaction ID
+Order/Transaction/Reference Number
+Order/Transaction/Reimbursement
+PIN
+PIN Code
+PIN Code Management
+PIN Code Recovery
+PIN Code Reset
+PIN Code Restoration
+PIN Code Retrieval
+PIN Management
+PIN Recovery
+PIN Recovery Page URL
+PIN Reset
+PIN Reset Page URL
+PIN Retrieval
+PIN Retrieval Page URL
+PIN Settings
+PIN code
+Password
+Password Management
+Password Recovery
+Password Recovery Page
+Password Recovery Page URL
+Password Reset
+Password Reset Page
+Password Reset Page URL
+Password and Security
+Payment Issue Email
+Payment Issue Phone Number
+Person Name
+Pin Code Settings
+Platform Login URL
+Platform URL
+Privacy
+Product Category
+Product Feedback Email
+Product Reviews Email
+Product/Service Defect Refund Time
+Product/Service Name
+Profile
+Profile PIN Recovery
+Profile Recovery
+Profile Recovery Page
+Profile Recovery Page URL
+Profile Security
+Profile Settings
+Profile Type
+Purchase Details
+Purchase History
+Purchase Status
+Purpose of the Features
+Rebate ID
+Rebate Identifier
+Rebate Number
+Rebate Tracking Number
+Recover Access Key
+Recover Key
+Recover PIN
+Reference Number
+Refund Amount
+Refund Helpline Number
+Refund Hotline Number
+Refund Policy
+Refund Processing Time
+Registration Support Phone Number
+Regular Profile
+Reimbursement ID
+Reimbursement Request Number
+Remove
+Reset
+Reset Access Key
+Reset Account Key
+Reset Key
+Reset PIN
+Reset Password
+Reset Pin Code
+Reset User Key
+Restitution ID
+Restore Access Key
+Restore PIN Code
+Restore Password
+Restore User Access Key
+Restore User Key
+Retail Stores
+Retrieve Account Key
+Retrieve Account PIN
+Retrieve Key
+Retrieve PIN
+Retrieve PIN Code
+Retrieve Profile Key
+Retrieve User Account Key
+Retrieve User Key
+Return Policy
+Review Platform
+Review Platform 1
+Review Platform 2
+Salutation
+Same-Day Order Time
+Save
+Second Step
+Security
+Security & Privacy
+Security Settings
+Security and Privacy
+Settings
+Shipment Tracking Number
+Shipping Address
+Shipping Addresses
+Shipping Cut-off Time
+Shipping Method
+Shipping Status
+Sign Up
+Social Media Handles
+Social Media Platform
+Standard Delivery Time
+Standard Shipping Days
+Standard Shipping Time
+Stolen User Key
+Store Address
+Store Location
+Store Pickup Time
+Submit
+Support Channel
+Support Channel 1
+Support Channel 2
+Support Hours
+Support Page URL
+Support Phone Number
+Switch Plan
+Switch User
+Switch to {{Account Category
+Switch to {{Account Type
+Switching option
+Third Step
+Timeframe
+Toll-Free Number
+Track Order
+Track Reimbursement
+Tracking Information
+Tracking Number
+Tracking Page
+Unauthorized Charges Refund Time
+Update Account
+Update Profile
+Upgrade Account
+Upgrade Account Type
+Upgrade or Downgrade Account
+Upgrade to {{Account Type
+User Account Recovery
+User Account Settings
+User Key Retrieval
+User Key Retrieval Page URL
+User Management
+User Profile
+User Profile Page URL
+User Profile Settings
+User Settings
+Username
+Website URL
+Working Hours
+X-day/money back guarantee period
+Year
+Zip Code
+additional details
+contact_method
+customer_support_phone_number
+mention the different contact options available
+month
+number of days
+order number
+proceed to our website and click on the 'Contact Us' button / dial our customer support number / reach out to our live chat support
+provide step-by-step instructions
+the reason for your call
+the specific topic you need assistance with
+tracking number
+year
+your issue
+{{Account Category
+{{Account Type
