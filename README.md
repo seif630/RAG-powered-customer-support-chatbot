@@ -133,17 +133,6 @@ python app.py
 
 > 💡 **Windows shortcut:** after creating `.venv`, just double-click **`Run Project.bat`**. It activates the environment, starts the server and opens your browser.
 
-### Open in your browser
-
-| Page | URL |
-|---|---|
-| 💬 Chatbot | http://127.0.0.1:5000 |
-| 📍 Order Tracking | http://127.0.0.1:5000/track |
-| 🎨 Infographic Generator | http://127.0.0.1:5000/infograph |
-
-> [!NOTE]
-> **First run takes a few minutes.** The `bge-m3` model is downloaded from Hugging Face, and `vector_index.faiss` + `id_map.json` are generated from `records.csv`. Later startups load the cached index instantly.
-
 ---
 
 ## 📡 API Reference
